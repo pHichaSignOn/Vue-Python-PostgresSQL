@@ -1,0 +1,118 @@
+
+>>ติดตั้ง<< 
+1.node.js
+	>>https://nodejs.org/en/download
+	>>node --version
+
+2.python
+	>>https://www.python.org/downloads/
+	>>https://fastapi.tiangolo.com/ (คู่มือ)
+	>>python --version #windows
+	>>python3 --version @macbook
+
+3.postgresql
+	>>https://www.postgresql.org/download/
+
+4.DBeaver
+	>>https://dbeaver.io/download/
+
+5.VScode
+	>>https://code.visualstudio.com/Download
+
+6.Extension หลักสำหรับ Vue.js บน VS Code
+	>>Volar (Vue Language Features)
+	>>Vue VSCode Snippets
+	>>ESLint
+	>>Prettier - Code Formatter
+	>>Vue Developer Tools (Debugging)
+
+7.Extension หลักสำหรับ python บน VS Code
+	>>Python (โดย Microsoft)
+	>>Pylance (โดย Microsoft)
+	>>Jupyter (โดย Microsoft)
+
+8.vue (คู่มือ)
+	>>https://vuejs.org/
+
+9.vuetify (คู่มือ) 
+	>>https://vuetifyjs.com/en/
+
+10.mdi Search
+	>>https://mdisearch.com/
+
+10.สร้าง Project vuetify
+	1.npm create vuetify
+	2.Project name: frontend
+	3.Default (Adds routing, ESLint & SASS variables) เลือก
+	4.Use TypeScript? › No
+	5.npm
+	6.Install Dependencies? › Yes
+	7.cd frontend
+	8.npm run dev
+
+11. เขื่อต่อ DB_PSQL
+	1.mysql -u root -p
+	2.enter password: kk2020kk
+
+12. Create New Database
+	1.project_test
+
+13. FaskAPI Backend
+	1.สร้าง Virtual Environment 
+	2.python3 -m venv env
+	3.source env/bin/activate // macbook 
+	4.deactivate >>macbook  // deactivate >>windows อกกจาก .env 
+
+	>>ติดตั้งไลบรารี
+	5.(env)pip install Flask psycopg2-binary python-dotenv bcrypt flask-cors PyJWT flask-jwt-extended    
+
+	6.(env)pip install Flask 	
+	7.(env)pip install --upgrade pip
+	8.(env)pip install psycopg2 เป็น ไลบรารีที่ใช้เชื่อมต่อ PostgreSQL Database จาก Python 
+	pip install psycopg2-binary แนะนำใช้ psycopg2-binary ถ้าเป็น development/test
+	9.(env)pip install python-dotenv อ่านค่า environment variables จากไฟล์ .env
+	10.(env)pip install bcrypt ใช้ bcrypt → ปลอดภัยกว่า
+	11.(env)pip install flask-cors ใช้ CORS หรือ CSRF (เวลารันจากเว็บเบราเซอร์)
+	12.(env)pip install PyJWT เพราะ JWT_SECRET_KEY ไม่ใช่ package ที่ต้องติดตั้ง แต่เป็น environment variable (ค่าตั้งค่า) ที่เราต้องกำหนดเองเพื่อเก็บ secret key ที่ใช้เข้ารหัส/ถอดรหัส JWT token
+	13.(env)pip install flask-jwt-extended
+	
+	14.สร้าง .env
+	15.สร้าง db.py
+	16.สร้าง config.py 
+	16.สร้าง password_utils.py
+	17.สร้าง create_table.py
+	18.สร้าง add_user.py
+	19.สร้าง auth.py
+	20.สร้าง app.py
+
+ตรวจ port >>node 11608
+	lsof -i :5000
+	
+ตรวจสอบ port หลัง kill
+	kill -9 11608
+
+	app.py (ไฟล์นี้)
+	│
+	├── auth.py (มี auth_bp และ route /login)
+	│   └── /login endpoint สำหรับล็อกอิน
+	│
+	├── config.py (มี JWT_SECRET_KEY และการตั้งค่าอื่นๆ)
+	│
+	├── db.py (มี get_connection() สำหรับ database)
+	│
+	└── password_utils.py (มี hash_password() และ check_password())
+
+	21.ใน DBeaver สร้าง DB: project_vue
+	22.สร้าง Table ลง DB> python create_table.py
+	23.เพิ่ม user ลง DB>> python add_user.py
+	24.(env)flask run --host=0.0.0.0 --port=5000
+
+14. nodejs
+	1.npm install vue-router@4
+	2.npm install axios
+	2.npm install ol //map
+
+15. รันด้วย Python ที่อยู่ใน venv:
+	flask run
+	flask run --host=0.0.0.0 --port=5000
+	uvicorn app:app --host 127.0.0.1:5500 // --port 5000  
