@@ -1,0 +1,244 @@
+/* Main Style */
+body {
+  font-family: "Prompt", sans-serif; /* กำหนดฟอนต์ใน global CSS */
+  background-color: white !important; /* กำหนดพื้นหลังเป็นสีขาว */
+  margin: 0; /* ลบ margin ของ body */
+  padding: 0; /* ลบ padding ของ body */
+}
+
+.white-bg {
+  background-color: white !important; /* กำหนดพื้นหลังเป็นสีขาว */
+}
+.map-main{
+  padding: 0 !important;  
+}
+.h1 {
+  padding: 60px 40px; /* ระยะห่างภายใน */
+  font-size: 50px; /* ขนาดตัวอักษร */
+  color: #452ad0; /* สีตัวอักษร */
+  text-align: center; /* จัดกึ่งกลาง */ 
+}
+.message-error{
+  margin-top: 10px; /* ระยะห่างด้าบน */     
+  text-align: center; /* จัดกึ่งกลาง */ 
+  color: #d32f2f; /* สีตัวอักษร */
+  font-size: 20px; /* ขนาดตัวอักษร */
+}
+/* Main Style End*/
+
+/* AppBar Drawer Style */
+.app-bar{
+  background-color: #3b5998 !important; /* สีน้ำเงินเข้มสวย */
+  color: #ffffff; /* ข้อความและไอคอนเป็นสีขาว */
+  transition: background-color 0.3a ease, box-shadow 0.3s ease; /* ทำให้เวลาที่สีพื้นหลังหรือเงา (box-shadow) เปลี่ยนเกิดการ เคลื่อนไหวลื่น ใช้เวลา 0.3 วินาที */
+  box-shadow: 0 2px 8px rgba(0, 0,0, 0.2); /* ใส่ เงาเล็ก ๆ เพื่อให้ AppBar ดูมีมิติ ไม่แบน */
+}
+.app-bar:hover {
+  background-color: #5a74c8 !important; /* น้ำเงินอมม่วงอ่อนเวลาชี้ */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* ใส่ เงาเล็ก ๆ เพื่อให้ AppBar ดูมีมิติ ไม่แบน */
+}
+
+/* Login Style */
+/* ทำให้เต็มจอและอยู่ตรงกลาง */
+.center-content {
+  min-height: 100vh; /* ความสูงขั้นต่ำ 100vh */
+  display: flex; /* ใช้ flexbox */
+  justify-content: center; /* จัดกึ่งกลางแนวนอน */
+  align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+}
+/* โลโก้ */
+.logo {
+  text-align: center; /* จัดกึ่งกลางโลโก้ */
+  margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+/* หัวข้อ */
+.center-box {
+  text-align: center; /* จัดกึ่งกลางข้อความ */
+  margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+.login-title {
+  font-weight: 700; /* หนักตัวอักษร */
+  color: #452ad0; /* สีตัวอักษร */
+}
+/* ฟอร์ม */
+.form-group {
+  margin-bottom: 18px; /* ระยะห่างระหว่างฟอร์ม */
+}
+.form-group label {
+  display: block; /* แสดง label เป็นบล็อก */
+  font-weight: 600; /* หนักตัวอักษร */
+  color: #452ad0; /* สีตัวอักษร */
+  margin-bottom: 6px; /* ระยะห่างด้านล่าง */
+}
+.form-group input {
+  width: 100%; /* ความกว้างเต็ม */
+  padding: 8px 10px; /* ระยะห่างภายใน */
+  border-radius: 6px; /* มุมโค้ง */
+  border: 1px solid #ccc; /* เส้นขอบ */
+  color: #452ad0; /* สีตัวอักษร */
+  font-size: 16px; /* ขนาดตัวอักษร */
+}
+/* กล่อง login */
+.login-container {
+  padding: 60px 40px; /* ระยะห่างภายใน */
+  border-radius: 35px; /* มุมโค้ง */
+  border: 1px solid white; /* เส้นขอบสีขาว */
+  box-shadow: 0 20px 100px #452ad0; /* เงา */
+  width: 480px; /* ความกว้าง */
+  max-width: 90vw; /* ความกว้างสูงสุด */
+  box-sizing: border-box; /* ให้ padding และ border นับรวมกับความกว้าง */
+  background: #fff; /* พื้นหลังสีขาว */
+}
+/* ปุ่ม login */
+.login-btn {
+  width: 100%; /* ความกว้างเต็ม */
+  background-color: #6f78dc; /* สีพื้นหลัง */
+  color: white; /* สีตัวอักษร */
+  padding: 12px 0; /* ระยะห่างภายใน */
+  font-size: 18px; /* ขนาดตัวอักษร */
+  font-weight: 700; /* หนักตัวอักษร */
+  border-radius: 8px; /* มุมโค้ง */
+  border: none; /* ไม่มีเส้นขอบ */
+  cursor: pointer; /* แสดงเคอร์เซอร์เป็นมือ */
+  transition: background 0.2s ease; /* การเปลี่ยนแปลงสีพื้นหลังเมื่อ hover */
+}
+.login-btn:hover {
+  background-color: #452ad0; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+}
+.login-btn[disabled] {
+  background-color: #452ad0; /* สีพื้นหลังเมื่อปุ่มถูกปิดใช้งาน */
+  cursor: not-allowed; /* แสดงเคอร์เซอร์เป็นไม่อนุญาต */
+}
+/* End Login Style */
+
+/* Custon Table */
+
+.custom-table{
+  background-color: #28638b !important;
+  color: white !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.custom-search{
+  background-color: white !important;
+  color: black !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 8px; 
+}
+
+.custom-headers{
+  background-color: rgb(87, 184, 87) !important;
+  color: black !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 8px; 
+}
+
+.custom-headers-table{
+  background-color: green !important;
+  color: white !important;
+  padding: 8px
+}
+
+.row-even{
+  background-color: #e8f5e9;
+}
+
+.row-odd{
+  background-color: #ffffff;
+}
+
+.tr{
+  color: black
+}
+/* End Custon Table */
+
+/* Delete Style */
+
+.confirm-delete-dialog{
+  border-radius: 8px;
+}
+
+.confirm-delete-title{
+  background-color: red;
+  color: white;
+  padding: 16px;
+}
+
+.confirm-delete-text{
+  background-color: white;
+  color: black;
+  padding: 20px 16px;
+  font-size: 16px;
+}
+
+.confirm-delete-action{
+  background-color: white;
+  padding: 8px 16px 16px;
+}
+/* End Delete Style */
+
+/* Map Style */
+
+/* Map wrapper */
+.map-wrapper {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin: 20px; เว้นขอบซ้าย-ขวา */
+}
+/* Ma */
+.map {
+  width: 100%;
+  height: 65vh; /* ปรับได้ตามต้องการ */
+  border: 10px solid #cccccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+/* ปุ่ม Zoom + Fullscreen */
+.zoom-buttons{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  border-radius: 60px;
+  background: rgba(255, 255., 255., 0.8);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1000;
+}
+
+/* พิกัด */
+.coords {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.ol-popup {
+  position: absolute;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+/* back-btn  */
+.back-btn{
+  color: #4caf50 !important;
+  font-weight: bold;
+}
+.back-btn:hover{
+  background-color: rgba(76, 175, 80, 0.1);
+}
+/* End Map Style */
