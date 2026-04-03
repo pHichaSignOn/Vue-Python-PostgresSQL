@@ -52,7 +52,7 @@
 
 11. เขื่อต่อ DB_PSQL
 	1.mysql -u root -p
-	2.enter password: kk2020kk
+	2.enter password: ********
 
 12. Create New Database
 	1.project_test
